@@ -11,7 +11,7 @@ const Page: NextPage = () => {
       <nav>
         <Link href="/">
           <a>
-            <h1 className="text-xl font-bold">quiller</h1>
+            <h1 className="text-xl font-bold">✏️ quiller</h1>
           </a>
         </Link>
 

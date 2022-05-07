@@ -1,4 +1,4 @@
-# quiller
+# :pencil2: quiller
 
 Personal note-taking simplified.
 
