@@ -39,7 +39,7 @@ class Document extends NextDocument {
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <Script
             strategy="afterInteractive"
-            src={`https://www.googletagmanager.com/gtag/js?id=G-PKC7BZB9WD`}
+            src="https://www.googletagmanager.com/gtag/js?id=G-PKC7BZB9WD"
           />
           <Script id="gtag" strategy="afterInteractive">
             {`
