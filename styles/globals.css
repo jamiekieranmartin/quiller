@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+  }
+
+  * {
+    @apply text-gray-800;
+  }
+
+  input,
+  textarea {
+    @apply bg-transparent;
+  }
+
+  nav {
+    @apply absolute top-5 left-5 lg:left-10 flex items-center gap-4;
+  }
+
+  .icon-button {
+    @apply rounded-full p-2 hover:bg-stone-600 transition-all duration-300 ease-in-out;
+  }
+
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&display=swap");
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  touch-action: manipulation;
+  font-feature-settings: "case" 1, "rlig" 1, "calt" 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  @apply bg-stone-50;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+}
