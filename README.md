@@ -1,6 +1,6 @@
 # :pencil2: quiller
 
-Personal note-taking simplified.
+Offline personal note-taking simplified.
 
 ## Usage
 
