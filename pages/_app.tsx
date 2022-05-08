@@ -7,7 +7,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     <>
       <NextSeo
         title="quiller"
-        description="Personal note-taking simplified."
+        description="Offline personal note-taking simplified."
         canonical="https://quiller.vercel.app"
       />
       <Component {...pageProps} />
