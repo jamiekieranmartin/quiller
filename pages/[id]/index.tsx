@@ -82,7 +82,7 @@ const Page: NextPage = () => {
           {note?.title}
         </h1>
 
-        <div className="w-full flex-grow text-lg py-2 px-3 focus:outline-none">
+        <div className="w-full flex-grow text-lg py-2 px-3 focus:outline-none whitespace-pre-line">
           {note?.content}
         </div>
       </article>
