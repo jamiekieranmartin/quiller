@@ -10,7 +10,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
     const { children, className, ...rest } = props;
 
     return (
-      <div className="flex flex-col">
+      <div className="flex flex-col flex-grow">
         <label htmlFor={rest.id} className="sr-only">
           {children}
         </label>
@@ -18,7 +18,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
         <textarea
           ref={ref}
           className={clsx(
-            "bg-transparent w-full font-bold text-2xl py-2 px-3 focus:outline-none",
+            "bg-transparent w-full text-lg py-2 px-3 focus:outline-none",
             className
           )}
           {...rest}
