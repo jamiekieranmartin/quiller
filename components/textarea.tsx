@@ -18,7 +18,7 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
         <textarea
           ref={ref}
           className={clsx(
-            "bg-transparent w-full text-lg py-2 px-3 focus:outline-none",
+            "bg-transparent flex-grow w-full text-lg py-2 px-3 focus:outline-none",
             className
           )}
           {...rest}
