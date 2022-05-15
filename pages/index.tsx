@@ -2,37 +2,23 @@ import dayjs from "../lib/dayjs";
 import type { NextPage } from "next";
 import Link from "next/link";
 import { useNotes } from "../lib/useNotes";
+import { AddIcon } from "../components/icons";
+import { Nav } from "../components";
+import { Icon } from "../components/icon";
+import { Layout } from "../components/layout";
 
 const Page: NextPage = () => {
   const { notes } = useNotes();
 
   return (
-    <section className="max-w-prose mx-auto grid gap-8 py-16 px-2">
-      <nav>
-        <Link href="/">
-          <a>
-            <h1 className="text-xl font-bold">✏️ quiller</h1>
-          </a>
-        </Link>
-
+    <Layout>
+      <Nav>
         <Link href="/new">
-          <button className="group icon-button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-7 w-7 stroke-stone-900 group-hover:stroke-white transition-all duration-300 ease-in-out"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 4v16m8-8H4"
-              />
-            </svg>
-          </button>
+          <Icon>
+            <AddIcon />
+          </Icon>
         </Link>
-      </nav>
+      </Nav>
 
       {notes.length ? (
         notes.map((note) => {
@@ -65,7 +51,7 @@ const Page: NextPage = () => {
           </Link>
         </small>
       )}
-    </section>
+    </Layout>
   );
 };
 
