@@ -26,7 +26,7 @@ const Page: NextPage = () => {
           return (
             <Link key={note.id} href={`/${note.id}`}>
               <a className="hover:opacity-50 transition-all duration-300 ease-in-out">
-                <article className="flex flex-col">
+                <article className="flex flex-col my-3">
                   <h1 className="w-full font-bold text-2xl py-2 px-3">
                     {note.title}
                   </h1>
