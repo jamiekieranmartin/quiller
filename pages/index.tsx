@@ -35,7 +35,7 @@ const Page: NextPage = () => {
                     {created_at.format("LLLL")}
                   </small>
 
-                  <p className="w-full flex-grow text-lg py-2 px-3 line-clamp-1">
+                  <p className="w-full flex-grow text-lg py-2 px-3 line-clamp-1 whitespace-pre-line">
                     {note?.content}
                   </p>
                 </article>
