@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useNote } from "../../lib/useNote";
-import { Icon, Layout, Nav } from "../../components";
+import { Icon, Layout, Nav, Section } from "../../components";
 import { ArrowRightIcon, DeleteIcon, EditIcon } from "../../components/icons";
 
 const Page: NextPage = () => {
@@ -42,15 +42,17 @@ const Page: NextPage = () => {
         </button>
       </Nav>
 
-      <article className="flex flex-col h-full gap-4">
-        <h1 className="w-full font-bold text-2xl py-2 px-3 focus:outline-none">
-          {note?.title}
-        </h1>
+      <Section>
+        <article className="flex flex-col h-full gap-4 pt-8">
+          <h1 className="w-full font-bold text-2xl py-2 px-3 focus:outline-none">
+            {note?.title}
+          </h1>
 
-        <div className="w-full flex-grow text-lg py-2 px-3 focus:outline-none whitespace-pre-line">
-          {note?.content}
-        </div>
-      </article>
+          <div className="w-full flex-grow text-lg py-2 px-3 focus:outline-none whitespace-pre-line">
+            {note?.content}
+          </div>
+        </article>
+      </Section>
     </Layout>
   );
 };

@@ -13,6 +13,7 @@ import {
   Input,
   TextArea,
   Button,
+  Section,
 } from "../components";
 
 type Form = {
@@ -51,28 +52,31 @@ const Page: NextPage = () => {
         </Link>
       </Nav>
 
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <Input
-          id="title"
-          required
-          minLength={3}
-          placeholder="Title..."
-          {...register("title")}
-        >
-          Title
-        </Input>
+      <Section>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <Input
+            id="title"
+            className="text-2xl"
+            required
+            minLength={3}
+            placeholder="Title..."
+            {...register("title")}
+          >
+            Title
+          </Input>
 
-        <TextArea
-          id="content"
-          required
-          placeholder="Content..."
-          {...register("content")}
-        >
-          Content
-        </TextArea>
+          <TextArea
+            id="content"
+            required
+            placeholder="Content..."
+            {...register("content")}
+          >
+            Content
+          </TextArea>
 
-        <Button type="submit">Save</Button>
-      </Form>
+          <Button type="submit">Save</Button>
+        </Form>
+      </Section>
     </Layout>
   );
 };

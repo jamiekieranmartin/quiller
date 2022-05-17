@@ -11,7 +11,7 @@ export const Form = React.forwardRef<HTMLFormElement, FormProps>(
     return (
       <form
         ref={ref}
-        className={clsx("flex flex-col h-full gap-4", className)}
+        className={clsx("flex flex-col h-full gap-4 py-8", className)}
         {...rest}
       >
         {children}

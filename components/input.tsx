@@ -9,17 +9,14 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
     const { children, className, ...rest } = props;
 
     return (
-      <div className="flex flex-col">
+      <div className={clsx("flex flex-col", className)}>
         <label htmlFor={rest.id} className="sr-only">
           {children}
         </label>
 
         <input
           ref={ref}
-          className={clsx(
-            "bg-transparent w-full font-bold text-2xl py-2 px-3 focus:outline-none",
-            className
-          )}
+          className="bg-transparent w-full font-bold py-2 px-3 focus:outline-none"
           {...rest}
         />
       </div>

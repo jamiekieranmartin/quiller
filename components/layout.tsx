@@ -1,11 +1,16 @@
-import React, { Children } from "react";
+import clsx from "clsx";
+import React from "react";
+import { Icon } from "./icon";
 
-export type LayoutProps = {};
+export type LayoutProps = {
+  className?: string;
+};
 
 export const Layout: React.FC<React.PropsWithChildren<LayoutProps>> = ({
   children,
+  className,
 }) => (
-  <section className="h-screen max-w-prose mx-auto py-16 px-2">
+  <section className={clsx("flex flex-col h-screen", className)}>
     {children}
   </section>
 );

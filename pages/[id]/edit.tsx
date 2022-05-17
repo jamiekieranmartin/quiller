@@ -14,8 +14,9 @@ import {
   Input,
   Layout,
   Nav,
+  Section,
 } from "../../components";
-import { ArrowRightIcon } from "../../components/icons";
+import { CloseIcon } from "../../components/icons";
 
 type Form = {
   title: string;
@@ -60,33 +61,36 @@ const Page: NextPage = () => {
       <Nav>
         <Link href={`/${id}`}>
           <Icon>
-            <ArrowRightIcon />
+            <CloseIcon />
           </Icon>
         </Link>
       </Nav>
 
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <Input
-          id="title"
-          required
-          minLength={3}
-          placeholder="Title..."
-          {...register("title")}
-        >
-          Title
-        </Input>
+      <Section>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <Input
+            id="title"
+            className="text-2xl"
+            required
+            minLength={3}
+            placeholder="Title..."
+            {...register("title")}
+          >
+            Title
+          </Input>
 
-        <TextArea
-          id="content"
-          required
-          placeholder="Content..."
-          {...register("content")}
-        >
-          Content
-        </TextArea>
+          <TextArea
+            id="content"
+            required
+            placeholder="Content..."
+            {...register("content")}
+          >
+            Content
+          </TextArea>
 
-        <Button type="submit">Save</Button>
-      </Form>
+          <Button type="submit">Save</Button>
+        </Form>
+      </Section>
     </Layout>
   );
 };
