@@ -27,7 +27,7 @@ const Page: NextPage = () => {
 
   const filtered_notes = notes
     .filter(
-      ({ title, content }) => title.includes(search) || content.includes(search)
+      ({ title, content }) => title.toLowerCase().includes(search) || content.toLowerCase().includes(search)
     )
     .sort((a, b) => {
       switch (order_by) {
