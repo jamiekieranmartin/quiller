@@ -25,7 +25,7 @@ const Page: NextPage = () => {
 
   const { search, order_by } = watch();
 
-  const equals = (content) => content.toLowerCase().includes(search.toLowerCase());
+  const equals = (content: string) => content.toLowerCase().includes(search.toLowerCase());
 
   const filtered_notes = notes
     .filter(
