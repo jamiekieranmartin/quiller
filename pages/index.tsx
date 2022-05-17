@@ -25,9 +25,11 @@ const Page: NextPage = () => {
 
   const { search, order_by } = watch();
 
+  const equals = (content) => content.toLowerCase().includes(search.toLowerCase());
+
   const filtered_notes = notes
     .filter(
-      ({ title, content }) => title.toLowerCase().includes(search) || content.toLowerCase().includes(search)
+      ({ title, content }) => equals(title) || equals(content)
     )
     .sort((a, b) => {
       switch (order_by) {
